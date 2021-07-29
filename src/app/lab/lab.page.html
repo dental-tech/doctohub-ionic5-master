@@ -1,0 +1,902 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'lab_test' | translate}}
+
+                <div class="select_box end">
+                    <h3 class="ion-text-end">{{'location' | translate}}</h3>
+                    <ion-select mod="md" [(ngModel)]="location" interface="popover">
+                        <ion-select-option value="n1">Wallington</ion-select-option>
+                        <ion-select-option value="n2">Nerobi</ion-select-option>
+                        <ion-select-option value="n3">Central Park</ion-select-option>
+                    </ion-select>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+<!--
+    <div class="search_box d-flex" (click)="search()">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <h2>{{'search_for_tests' | translate}}</h2>
+    </div>
+-->
+
+    <div class="search_box d-flex">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_for_tests' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Enzo Clinical Labs-Astoria</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">250+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Het Groene Leven Lab</h2>
+                    <p (click)="labdetails()">3016 Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">220+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">Lab Peter Paul Huf</h2>
+                    <p (click)="labdetails()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">550+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="labdetails()">
+                    <img src="assets/imgs/lab-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="labdetails()">PRP Clinical Labs</h2>
+                    <p (click)="labdetails()">1123 1st Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">2000+ {{'test_available' | translate}}<span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

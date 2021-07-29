@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'ask_doctor' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form">
+        <h2>{{'describe_your_issue' | translate}}</h2>
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <ion-label mode="md" position="fixed">{{'treatment_type' | translate}}</ion-label>
+                <ion-select mode="md" class="ion-text-end" [(ngModel)]="Treatment">
+                    <ion-select-option value="v1">Bones & Join Problem</ion-select-option>
+                    <ion-select-option value="v2">Blood Presser Problem</ion-select-option>
+                    <ion-select-option value="v3">Skin Problem</ion-select-option>
+                    <ion-select-option value="v4">Bones & Join Problem</ion-select-option>
+                    <ion-select-option value="v5">Blood Presser Problem</ion-select-option>
+                    <ion-select-option value="v6">Skin Problem</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-label mode="md" position="fixed">{{'title' | translate}}</ion-label>
+                <ion-input mode="md" class="ion-text-end" type="name" placeholder="{{'tap_to_add_title_100_words' | translate}}"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-textarea mode="md" rows="8"  type="name" placeholder="{{'file_attachment_optional' | translate}}"></ion-textarea>
+            </ion-item>
+
+            <ion-item lines="none" class="file_attachment">
+                <ion-label mode="md" position="fixed" class="d-flex">
+                    {{'file_attachment_optional' | translate}}
+                    <span class="end"> {{'upload_file' | translate}}</span>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+        <p>{{'usually_our_doctor_reply_in_5_10_minutes' | translate}}</p>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" shape="block" class="btn">{{'submit_question' | translate}}</ion-button>
+</ion-footer>

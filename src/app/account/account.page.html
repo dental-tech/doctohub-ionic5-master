@@ -1,0 +1,139 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'my_account' | translate}}
+                <ion-icon class="zmdi zmdi-settings ion-text-end end" (click)="settings()"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="buy_this_app" *ngIf="config.showBuyPromt" (click)="buyAppAction()">
+        <h2>
+            <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div>
+
+    <ion-card class="d-flex" (click)="profile()">
+        <div class="img_box center_img">
+            <img src="assets/imgs/profile4.png" class="crop_img">
+        </div>
+        <div class="text_box">
+            <h2>Emili Williamson</h2>
+            <p class="d-flex">
+                {{'complete_your_profile' | translate}}
+                <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+            </p>
+        </div>
+    </ion-card>
+
+    <ion-list lines="none">
+        <ion-item (click)="myfeedbacks()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-thumb-up-down ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'my_feedbacks' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'list_of_fedbacks_given_by_you' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="blogs()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-file-text ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'health_blogs' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'real_articals_blogs_about_health_fitness' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="aboutus()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-info ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'about' | translate}} DoctoHub</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'company_details_abput' | translate}} DoctoHub</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="terms()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'terms_conditions' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'terms_condition_privacy_policy_of' | translate}} DoctoHub</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="help()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'help_support' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'let_us_know_your_query_or_any_suggetions' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="select_language()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-globe ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'change_language' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'select_preferred_language' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <ion-icon class="zmdi zmdi-share ion-text-start"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'share' | translate}} DoctoHub {{'app' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'share_app_with_your_friends_family_members' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

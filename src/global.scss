@@ -1,0 +1,658 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --white: #fff;
+    --primary: #d71e1e;
+    --secondary: #25a628;
+    --transparent: rgba(0, 0, 0, 0);
+    --text-light: #BBBBBB;
+    --text-light2: #747474;
+    --text-dark: #3D3D3D;
+    --text-black: #0e0e0f;
+    --input_bg: #eaeaea;
+    --bg-color: #F2F2F2;
+    --yelow_color: #ffba00;
+
+}
+
+
+.bg_color {
+    --background: var(--bg-color);
+}
+
+.d-flex {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+
+    .end {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        display: block;
+    }
+}
+
+.center_img {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        &.crop_img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: -50% !important;
+            right: -50% !important;
+            margin: auto;
+        }
+
+    }
+}
+
+.button {
+    &.btn {
+        width: 100%;
+        font-size: .8rem;
+        font-weight: 500;
+        height: 45px;
+        --background: var(--secondary);
+        text-transform: none;
+        color: var(--white);
+        margin: 0;
+        --box-shadow: none;
+        padding: 0;
+        text-transform: none;
+        letter-spacing: 0;
+
+        ion-icon {
+            font-size: 1.4rem;
+        }
+
+        &:hover:not(.disable-hover) {
+            --background: var(--secondary);
+        }
+
+        &.button-outline {
+            --background: var(--white);
+            --border-color: var(--primary);
+            --border-width: 1px;
+            letter-spacing: 0 !important;
+            font-weight: 600;
+            font-size: .95rem;
+            letter-spacing: 1.3px !important;
+
+            &:hover:not(.disable-hover) {
+                --background: var(--transparent);
+            }
+        }
+
+        &.button-round {
+            --border-radius: 50px !important;
+        }
+
+        &.button-block {
+            --border-radius: 4px !important;
+        }
+
+    }
+}
+
+ion-header {
+    z-index: 999;
+
+    &::after {
+        display: none !important;
+    }
+
+    ion-toolbar {
+        --background: var(--primary);
+        display: flex;
+        align-items: center;
+        min-height: 60px !important;
+        height: auto;
+        overflow: visible !important;
+        --border-width: 0 !important;
+
+        ion-buttons {
+            position: relative !important;
+            margin: 0;
+            --padding-end: 0 !important;
+            --padding-start: 0 !important;
+
+            ion-menu-button,
+            ion-back-button {
+                //				--color: var(--white) !important;
+                --color: var(--white) !important;
+                --icon-font-size: 1.3rem !important;
+                --padding-end: 0 !important;
+                --padding-start: 0 !important;
+            }
+
+
+            &.ios {
+                padding: 0 10px !important;
+            }
+
+        }
+
+        ion-title {
+            color: var(--white);
+            padding: 0px !important;
+            padding-right: 15px !important;
+            text-align: justify;
+            font-size: .95rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            position: relative !important;
+            overflow: visible !important;
+            line-height: 60px;
+
+            ion-icon {
+                font-size: 1.3rem !important;
+            }
+
+        }
+
+
+    }
+
+    &.bg_transparent {
+        ion-toolbar {
+            --background: var(--transparent);
+            --ion-color-base: transparent !important;
+        }
+    }
+}
+
+
+.form {
+    display: block;
+    position: relative;
+    width: calc(100% - 70px);
+    margin: 0 auto;
+
+    ion-list {
+        background: var(--transparent) !important;
+        margin: 0;
+        padding: 0;
+        //box-shadow: 0 -12px 10px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    ion-item {
+        --background: var(--transparent);
+        background: var(--input_bg);
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --highligh-color-focused: var(--transparent) !important;
+        box-shadow: none !important;
+        --min-height: 43px;
+        padding: 0px 18px 0px 18px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        --ripple-color: var(--transparent) !important;
+        --background-focused: var(--transparent) !important;
+
+        .icon_box {
+            margin: 0 !important;
+            margin-right: 13px !important;
+            position: relative;
+            top: 2px;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        ion-label {
+            color: var(--text-light) !important;
+            margin: 0;
+            letter-spacing: 0;
+            min-width: 50% !important;
+            -webkit-box-flex: unset !important;
+            flex: unset !important;
+            font-weight: 400 !important;
+            font-size: .85rem !important;
+            letter-spacing: .5px;
+
+        }
+
+        ion-textarea,
+        ion-input {
+            --padding: 0 !important;
+            font-weight: 500 !important;
+            font-size: .85rem !important;
+            letter-spacing: .5px;
+            --padding-start: 0 !important;
+            --padding-end: 0 !important;
+            --padding-top: 0 !important;
+            --padding-bottom: 0px !important;
+            color: var(--text-black);
+            --placeholder-color: var(--text-light) !important;
+            --placeholder-opacity: 1;
+            --placeholder-font-weight: 400 !important;
+            flex: unset !important;
+            min-width: 100%;
+            height: 100%;
+            letter-spacing: 0;
+            min-height: 19px;
+
+            input {
+                --padding: var(--no-padding);
+
+                &.native-input {
+                    --padding: var(--no-padding);
+                }
+            }
+
+        }
+
+        &.item-select {
+            ion-select {
+                min-width: 50%;
+                max-width: unset;
+                padding: 0;
+                font-weight: 500 !important;
+                font-size: .85rem !important;
+                letter-spacing: .5px;
+                color: var(--text-black);
+            }
+        }
+    }
+
+    ion-row {
+        margin: 0 -5px;
+    }
+}
+
+.alert-wrapper {
+    border-radius: 5px !important;
+    min-width: calc(100% - 58px) !important;
+    max-height: 484px !important;
+    height: auto;
+
+    .alert-head {
+        background: var(--bg-color);
+        padding: 15px 20px 15px 20px;
+
+        h2 {
+            text-transform: none;
+            font-size: 1rem;
+        }
+    }
+
+    .alert-radio-group {
+        max-height: 291px !important;
+
+        .alert-radio-button {
+            .alert-button-inner {
+                .alert-radio-label {
+                    font-size: .8rem;
+                    color: var(--text-black);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .alert-button-group {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 1.5px;
+            height: 100%;
+            background-color: var(--white);
+            z-index: 9999;
+            margin: 0 auto;
+        }
+
+        .alert-button {
+            color: var(--white);
+            background: var(--secondary);
+            height: 45px;
+            text-align: center;
+            margin: 0;
+            width: 50%;
+
+            .alert-button-inner {
+                width: 100%;
+                display: block;
+                height: fit-content;
+                font-size: .78rem;
+                text-transform: none;
+                letter-spacing: 0.4px;
+            }
+        }
+    }
+}
+
+app-location,
+app-lab,
+app-tests,
+app-specilities,
+app-finddoctor {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                box-shadow: none !important;
+                padding: 0 !important;
+                font-size: 0.9rem !important;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}
+
+ion-app[dir="rtl"] {
+    .d-flex .end {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+
+    ion-header ion-toolbar {
+        ion-title {
+            padding-right: 0px !important;
+            padding-left: 15px !important;
+        }
+
+        ion-buttons ion-back-button {
+            transform: rotate(-180deg);
+        }
+    }
+
+    app-medicalmap,
+    app-medical,
+    app-lab,
+    app-map,
+    app-doctroslist,
+    app-finddoctor,
+    app-specilities,
+    app-home {
+        ion-header ion-toolbar ion-title .title_inner .select_box h3 {
+            padding-right: 0px !important;
+            padding-left: 20px !important;
+        }
+    }
+
+    app-doctroslist {
+        ion-list ion-item .item_inner {
+            .item_header .img_box {
+                margin-right: 0 !important;
+                margin-left: 12px !important;
+            }
+
+            .scroll_content .img_box {
+                &:first-child {
+                    margin-left: 1px !important;
+                    margin-right: 14px !important;
+                }
+
+                &:last-child {
+                    margin-right: 1px !important;
+                    margin-left: 14px !important;
+                }
+            }
+        }
+    }
+
+    app-medicalmap,
+    app-map {
+        ion-footer ion-list ion-item {
+            .item_inner .item_header .img_box {
+                margin-right: 0 !important;
+                margin-left: 12px !important;
+            }
+
+            &:first-child {
+                margin-left: 4px !important;
+                margin-right: 8px !important;
+            }
+
+            &:last-child {
+                margin-right: 4px !important;
+                margin-left: 8px !important;
+            }
+        }
+    }
+
+    app-doctorprofile {
+        .banner .banner_details .doctor_details .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+
+        .tab_content ion-list.feedback ion-item .item_inner .reviewer_details .img_box {
+            margin-right: 0 !important;
+            margin-left: 12px !important;
+        }
+    }
+
+    app-appointmentbook {
+        ion-header .doctor_info .img_box {
+            margin-right: 0 !important;
+            margin-left: 14px !important;
+        }
+
+        ion-header .select_date {
+            &::after {
+                transform: rotate(180deg) !important;
+                right: unset !important;
+                left: 0 !important;
+            }
+
+            .calender_icon {
+                right: unset !important;
+                left: 0 !important;
+            }
+
+            .date_container .date {
+                &:first-child {
+                    margin-left: 7px !important;
+                    margin-right: 21px !important;
+                }
+
+                &:last-child {
+                    margin-right: 7px !important;
+                    margin-left: 90px !important;
+                }
+            }
+        }
+    }
+
+    app-addfeedback {
+        ion-header .doctor_info .img_box {
+            margin-right: 0 !important;
+            margin-left: 14px !important;
+        }
+    }
+
+    app-lab {
+        ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    app-labdetails {
+        ion-list ion-card.lab_info .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    app-medical {
+        ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    app-medicalmap {
+        ion-footer ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    app-medicaldetail {
+        ion-list ion-card.lab_info .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    app-appointment {
+        ion-list ion-item {
+            padding: 12px 0px 12px 11px !important;
+
+            .item_inner {
+                .date_time {
+                    margin-right: 0 !important;
+                    margin-left: 11px !important;
+
+                    &::after {
+                        right: unset !important;
+                        left: 0 !important;
+                    }
+                }
+
+                .appointment_details .doctor_details .img_box {
+                    margin-right: 0 !important;
+                    margin-left: 12px !important;
+                }
+            }
+
+        }
+    }
+
+    app-appointmentdetail {
+        ion-card {
+            .doctor_details .img_box {
+                margin-right: 0 !important;
+                margin-left: 12px !important;
+            }
+
+            .appointment_detail .detail_box ion-icon {
+                margin-right: 0 !important;
+                margin-left: 28px !important;
+            }
+        }
+    }
+
+    app-chats {
+        ion-list ion-item .item_inner {
+            .item_header .img_box {
+                margin-right: 0 !important;
+                margin-left: 12px !important;
+            }
+
+            .item_content ion-icon.zmdi-comments {
+                margin-right: 0 !important;
+                margin-left: 21px !important;
+            }
+        }
+    }
+
+    app-chatscreen {
+        .chat_container {
+            .chat_box {
+                &.send {
+                    margin-left: 0 !important;
+                    margin-right: auto !important;
+
+                    .text_box {
+                        border-radius: 0px 15px 15px 15px !important;
+                        text-align: left !important;
+
+                    }
+
+                }
+
+                &.receive {
+                    margin-left: auto !important;
+                    margin-right: 0 !important;
+
+                    .text_box {
+                        border-radius: 15px 9px 15px 15px !important;
+                        text-align: right !important;
+
+                        p {
+                            text-align: left !important;
+                        }
+                    }
+
+                    .user_img_box {
+                        margin-right: 0px !important;
+                        margin-left: 10px !important;
+                    }
+
+                }
+            }
+        }
+    }
+
+    app-account {
+        ion-card .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+
+    app-profile {
+        .profile_img .img_container ion-icon {
+            right: unset !important;
+            left: -1px !important;
+        }
+    }
+
+    app-myfeedbacks {
+        ion-list ion-item .item_inner .reviewer_details .img_box {
+            margin-right: 0 !important;
+            margin-left: 12px !important;
+        }
+    }
+app-account,
+    app-home {
+        .buy_this_app {
+            right: unset !important;
+            left: 10px !important;
+        }
+    }
+
+}

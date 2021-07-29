@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'help_support' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="banner">
+        <div class="banner_img center_img">
+            <img src="assets/imgs/about.png" class="crop_img">
+        </div>
+    </div>
+
+    <div class="form">
+        <h2>{{'let_us_know_your_issue' | translate}}</h2>
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <ion-input mode="md" type="number" placeholder="{{'phone_number' | translate}}"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-input mode="md" type="name" placeholder="{{'issue_regarding' | translate}}"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-textarea rows="6" mode="md" type="name" placeholder="{{'describe_your_issue' | translate}}"></ion-textarea>
+            </ion-item>
+        </ion-list> 
+        <ion-button size="large" shape="block" class="btn">{{'send_message' | translate}}</ion-button>
+    </div>
+</ion-content>

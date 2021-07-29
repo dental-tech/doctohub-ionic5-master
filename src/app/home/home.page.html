@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                <div class="app_logo">
+                    <img src="assets/imgs/header-logo.png">
+                </div>
+
+                <div class="select_box end">
+                    <h3 class="ion-text-end">{{'location' | translate}}</h3>
+                    <ion-select mod="md" [(ngModel)]="location" interface="popover">
+                        <ion-select-option value="n1">Wallington</ion-select-option>
+                        <ion-select-option value="n2">Nerobi</ion-select-option>
+                        <ion-select-option value="n3">Central Park</ion-select-option>
+                    </ion-select>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="banner">
+        <div class="banner_img">
+            <img src="assets/imgs/home-header.png">
+        </div>
+
+        <ion-button size="large" shape="block" class="btn" (click)="doctroslist()">{{'book_an_appointment_now' | translate}}</ion-button>
+    </div>
+    <ion-list lines="none">
+        <ion-item (click)="finddoctor()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_chatwith_doctor.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'chat_with_doctor' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'get_free_consultation_from_doctors_through_chats' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="lab()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_scan.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'book_scan__test_now' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'find_trusted_labs_near_your_area' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item (click)="medical()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_medicals.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'find_medicals_near_you' | translate}}</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>{{'get_a_quock_list_of_medicals_available_near_you' | translate}}</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <div class="buy_this_app" *ngIf="config.showBuyPromt" (click)="buyAppAction()">
+        <h2>
+            <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div>
+</ion-content>

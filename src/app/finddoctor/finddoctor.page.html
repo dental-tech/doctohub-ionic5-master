@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'find_doctor' | translate}}
+
+                <div class="select_box end">
+                    <h3 class="ion-text-end">{{'location' | translate}}</h3>
+                    <ion-select mod="md" [(ngModel)]="location" interface="popover">
+                        <ion-select-option value="n1">Wallington</ion-select-option>
+                        <ion-select-option value="n2">Nerobi</ion-select-option>
+                        <ion-select-option value="n3">Central Park</ion-select-option>
+                    </ion-select>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <div class="search_box d-flex">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'doctor_specialities_clinic_hospital' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color">
+
+    <div class="recent_search">
+        <h2 class="d-flex">{{'recent_search' | translate}}<span class="ion-text-end end">{{'clear_history' | translate}}</span></h2>
+        <h3 class="d-flex" (click)="specilities()">
+            <ion-icon class="zmdi zmdi-time-restore ion-text-start"> </ion-icon>
+            Cardiologist
+        </h3>
+        <h3 class="d-flex" (click)="specilities()">
+            <ion-icon class="zmdi zmdi-time-restore ion-text-start"> </ion-icon>
+            Cardiovascular surgeon
+        </h3>
+        <h3 class="d-flex" (click)="specilities()">
+            <ion-icon class="zmdi zmdi-time-restore ion-text-start"> </ion-icon>
+            Appolo hospital
+        </h3>
+    </div>
+
+    <ion-list lines="none">
+        <h2 class="d-flex">{{'quick_links' | translate}}</h2>
+        <ion-item (click)="specilities()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_doctors.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>Doctor</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>Allergist, Cardiologists, Dermatologiest</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="specilities()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_dentist.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>Dentist</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>Dentists, Prosthodonitions etc</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="specilities()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_ayurvedic.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>Ayurvedic</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>Allergist, Cardiologists, Dermatologiest</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="specilities()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/imgs/ic_therapist.png">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>Therapst & Nutritionists</span>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                    </h2>
+                    <p>Acupunturist, Physiotherapist, etc</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

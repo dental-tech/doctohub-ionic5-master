@@ -1,0 +1,118 @@
+.banner {
+    background: var(--white);
+
+    .logo {
+        height: 330px;
+        position: relative;
+
+        img {
+            width: 123px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    ion-segment {
+        --background: var(--transparent) !important;
+
+        ion-segment-button {
+            opacity: 1;
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--text-light) !important;
+            --background-checked: var(--transparent) !important;
+            --background-focused: var(--transparent) !important;
+            --indicator-color: var(--transparent) !important;
+            --indicator-box-shadow: none !important;
+            --ripple-color: var(--transparent) !important;
+            --color-hover: var(--primary);
+            --background-hover: var(--transparent) !important;
+            --color-checked: var(--primary);
+            --transition: .5s;
+            text-transform: none;
+            letter-spacing: 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 0;
+                transition: all .3s;
+                border-radius: 0px;
+                background: var(--primary);
+                margin: 0 auto;
+                height: 4px;
+                border-radius: 5px;
+            }
+
+            &.segment-button-checked {
+                color: var(--primary) !important;
+                font-weight: 800;
+
+                &::after {
+                    width: 55px;
+                }
+            }
+        }
+    }
+}
+
+.form {
+    padding-top: 24px;
+
+    ion-item {
+        h3 {
+            margin: 0;
+            color: var(--primary);
+            font-size: .78rem;
+            min-height: 42px;
+            line-height: 42px;
+            font-weight: 500;
+        }
+    }
+
+    .button.btn {
+        --background: var(--primary);
+
+        &:hover:not(.disable-hover) {
+            --background: var(--primary);
+        }
+    }
+
+    ion-list {
+        .button.btn {
+            margin-top: 23px;
+        }
+
+        ion-row {
+            padding-top: 11px;
+            align-items: center;
+
+            ion-col {
+                h6 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: .82rem;
+                }
+
+                .button.btn {
+                    margin-top: 0;
+
+                    &.register_now {
+                        --background: var(--white);
+                        color: var(--primary);
+                        font-weight: 700;
+                        --box-shadow: 0 3px 4px -1px rgba(0, 0, 0, 0.1);
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+}

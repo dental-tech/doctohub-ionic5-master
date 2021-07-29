@@ -1,0 +1,513 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'medical_shops' | translate}}
+
+                <div class="select_box end">
+                    <h3 class="ion-text-end">{{'location' | translate}}</h3>
+                    <ion-select mod="md" [(ngModel)]="location" interface="popover">
+                        <ion-select-option value="n1">Wallington</ion-select-option>
+                        <ion-select-option value="n2">Nerobi</ion-select-option>
+                        <ion-select-option value="n3">Central Park</ion-select-option>
+                    </ion-select>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <div class="view_in_map" (click)="medicalmap()">
+        <h2 class="d-flex">{{'view_in_map' | translate}}
+            <ion-icon class="zmdi zmdi-chevron-right end ion-text-end"></ion-icon>
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+          <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Johnson Medical Store</h2>
+                    <p (click)="medicaldetail()">251 Erena street, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Perry Pharmacy Store</h2>
+                    <p (click)="medicaldetail()">3421 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()"> G&G Medical Store</h2>
+                    <p (click)="medicaldetail()">3016 30th Dr, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="img_box center_img" (click)="medicaldetail()">
+                    <img src="assets/imgs/medical-3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 (click)="medicaldetail()">Margo Bean Medicines</h2>
+                    <p (click)="medicaldetail()">1123 1st Astoria, Astroia, NY 11102, USA</p>
+                    <h6 class="d-flex">{{'open' | translate}} 06: to 22:30 <span class="end ion-text-center">{{'call_now' | translate}}</span></h6>
+                </div>
+            </div>
+        </ion-item>
+        
+    </ion-list>
+
+</ion-content>

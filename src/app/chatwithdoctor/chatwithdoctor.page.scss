@@ -1,0 +1,67 @@
+.form {
+    margin: 0;
+    width: 100%;
+
+    h2 {
+        margin: 0;
+        color: var(--text-light2);
+        font-size: .85rem;
+        font-weight: 600;
+        padding: 20px 18px;
+    }
+
+    ion-list {
+        background: var(--white) !important;
+
+        ion-item {
+            background: var(--white) !important;
+            border-bottom: 1px solid var(--bg-color) !important;
+            border-radius: 0 !important;
+            margin: 0;
+            padding: 1px 18px;
+
+            ion-label {
+                color: var(--text-light) !important;
+                margin: 0;
+                font-size: .9rem !important;
+                letter-spacing: 0;
+                max-width: 43% !important;
+                width: fit-content !important;
+                font-weight: 400 !important;
+            }
+
+            ion-input {
+                min-width: unset !important;
+            }
+
+            &.file_attachment {
+                ion-label {
+                    width: 100% !important;
+                    min-width: 100% !important;
+
+                    span {
+                        &.end {
+                            color: var(--secondary);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    p{
+        color: var(--text-light);
+    font-size: .68rem;
+    margin: 0;
+    text-align: center;
+    padding: 33px 2px;
+    }
+}
+
+ion-footer {
+    padding: 0 24px 18px 24px;
+background: var(--bg-color);
+    .button.btn {
+        --background: var(--secondary) !important;
+    }
+}

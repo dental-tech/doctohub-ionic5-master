@@ -1,0 +1,98 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'preferences' | translate}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <h2 class="d-flex">{{'notification_settings' | translate}}</h2>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'appointment' | translate}}</span>
+                    </h2>
+                    <p>{{'sound_when_info_receive_regarding_appointment' | translate}}</p>
+                </div>
+                <ion-toggle class="end" checked mode="md"></ion-toggle>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'chats' | translate}}</span>
+                    </h2>
+                    <p>{{'sound_when_receive_a_message_form_doctor' | translate}}</p>
+                </div>
+                <ion-toggle class="end" checked mode="md"></ion-toggle>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span>{{'offer_update' | translate}}</span>
+                    </h2>
+                    <p>{{'sound_when_new_offer_or_updated_receive' | translate}}</p>
+                </div>
+                <ion-toggle class="end" checked mode="md"></ion-toggle>
+            </div>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-list lines="none">
+        <h2 class="d-flex">{{'general' | translate}}</h2>
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2>
+                        <span>{{'profile_edit' | translate}}</span>
+                    </h2>
+                </div>
+            </div>
+        </ion-item> 
+        
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2>
+                        <span>DoctoHub {{'website' | translate}}</span>
+                    </h2>
+                </div>
+            </div>
+        </ion-item> 
+         
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2>
+                        <span>{{'rate' | translate}} DoctoHub</span>
+                    </h2>
+                </div>
+            </div>
+        </ion-item>  
+        
+        <ion-item>
+            <div class="item_inner d-flex">
+                <div class="text_box">
+                    <h2>
+                        <span>{{'are_you_a_Doctor' | translate}} DoctoHub</span>
+                    </h2>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border" (click)="sign_in()">
+    <h2 class="d-flex">
+        {{'logout' | translate}}
+        <ion-icon class="zmdi zmdi-power end"></ion-icon>
+    </h2>
+</ion-footer>

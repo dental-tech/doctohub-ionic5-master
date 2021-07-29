@@ -1,0 +1,91 @@
+ion-header {
+    box-shadow: 0 -8px 10px 10px rgba(0, 0, 0, 0.1);
+
+    ion-toolbar ion-title {
+        padding: 0 !important;
+
+        .title_inner {
+            padding: 0 15px !important;
+
+            ion-icon {
+                font-size: 1.3rem !important;
+                min-width: 26px;
+            }
+        }
+    }
+
+    .search_box {
+        background: var(--white);
+        width: calc(100% - 0px);
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        overflow: hidden;
+        min-height: 48px;
+
+        ion-icon {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            min-width: 30px;
+            height: 35px;
+            line-height: 35px;
+            z-index: 99;
+        }
+
+        ion-searchbar {
+            --background: var(--transparent) !important;
+            --color: var(--text-black);
+            --placeholder-opacity: .6;
+            --placeholder-font-weight: 500 !important;
+            --placeholder-color: var(--text-light);
+            --box-shadow: none !important;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+ion-list {
+    background: var(--white) !important;
+    padding: 20px 0;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.07);
+
+
+    h2 {
+        margin: 0;
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 0 20px;
+        padding-bottom: 12px;
+    }
+
+
+    ion-item {
+        padding: 9px 0px;
+        --background: var(--transparent) !important;
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --min-height: unset;
+        width: calc(100% - 45px);
+        margin: 0 auto;
+
+        .item_inner {
+            h3 {
+                margin: 0;
+                color: var(--text-light2);
+                font-size: .85rem;
+            }
+
+            h4 {
+                margin: 0;  
+                color: var(--text-dark);
+                min-width: fit-content;
+              font-size: 0.9rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<!--
+<ion-header>
+	<ion-toolbar>
+		<ion-title>signin</ion-title>
+	</ion-toolbar>
+</ion-header>
+-->
+
+<ion-content class="bg_color">
+    <div class="banner">
+        <div class="logo ion-text-center">
+            <img src="assets/imgs/logo.png">
+        </div>
+        <ion-segment mode="md" lines="none" [(ngModel)]="login">
+            <ion-segment-button mode="md" lines="none" value="signin">
+                {{'sign_in' | translate}}
+            </ion-segment-button>
+            <ion-segment-button mode="md" lines="none" value="signup">
+                {{'sign_up' | translate}}
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div class="form" [ngSwitch]="login">
+        <ion-list lines="none" *ngSwitchCase="'signin'">
+            <ion-item lines="none">
+                <ion-input mode="md" type="number" placeholder="{{'phone_number' | translate}}"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-input mode="md" type="password" placeholder="{{'password' | translate}}"></ion-input>
+                <h3 class="password" slot="end" (click)="forgotpassword()">{{'forgot' | translate}}</h3>
+            </ion-item>
+
+            <ion-button mode="md" size="large" shape="block" class="btn" (click)="location()">{{'sign_in' | translate}}</ion-button>
+
+            <ion-row>
+                <ion-col size="6">
+                    <h6 class="ion-text-center">{{'new_user' | translate}}</h6>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button size="large" shape="block" class="btn register_now">{{'register_now' | translate}}</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+
+        <ion-list lines="none" *ngSwitchCase="'signup'">
+            <ion-item lines="none">
+                <ion-input mode="md" type="number" placeholder="{{'phone_number' | translate}}"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input mode="md" type="name" placeholder="{{'full_name' | translate}}"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-input mode="md" type="password" placeholder="{{'create_password' | translate}}"></ion-input>
+            </ion-item>
+
+            <ion-button size="large" shape="block" class="btn" (click)="location()">{{'sign_up' | translate}}</ion-button>
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                Dr.Joseph Williamson
+                <ion-icon class="zmdi zmdi-info-outline ion-text-end end"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="chat_container">
+        <div class="chat_box send">
+            <div class="text_box">
+                <h2>Hello Doctor,<br>Tell me if it is good time to talk?</h2>
+                <p>12:29 am</p>
+            </div>
+        </div>
+
+        <div class="chat_box receive">
+            <div class="user_img_box center_img">
+                <img src="assets/imgs/profile1.png" class="crop_img">
+            </div>
+            <div class="text_box">
+                <h2>Hello, How may I help you.? Tell me about your problem</h2>
+                <p>12:30 am</p>
+            </div>
+        </div>
+
+        <div class="chat_box send">
+            <div class="text_box">
+                <h2>Thanks you.!<br>Actually from last 2-3days <br>I am feeling too sickness</h2>
+                <p>12:30 am</p>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="form">
+        <ion-list lines="none d-flex">
+            <ion-item lines="none">
+                <ion-input type="text" placeholder="{{'write_your_message' | translate}}"></ion-input>
+            </ion-item>
+            <div class="attachment">
+                <ion-icon class="zmdi zmdi-attachment ion-text-center"></ion-icon>
+            </div>
+            <div class="send_btn end">
+                <ion-icon class="zmdi zmdi-mail-send"></ion-icon>
+            </div>
+        </ion-list>
+    </div>
+</ion-footer>

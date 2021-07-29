@@ -1,0 +1,256 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-sharp"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'find_doctor' | translate}}
+
+                <div class="select_box end">
+                    <h3 class="ion-text-end">{{'location' | translate}}</h3>
+                    <ion-select mod="md" [(ngModel)]="location" interface="popover">
+                        <ion-select-option value="n1">Wallington</ion-select-option>
+                        <ion-select-option value="n2">Nerobi</ion-select-option>
+                        <ion-select-option value="n3">Central Park</ion-select-option>
+                    </ion-select>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <div class="search_box d-flex">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'doctor_specialities_clinic_hospital' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <h2 class="d-flex">{{'top_specialities' | translate}}</h2>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Cardiologist </h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3>Orthalmologist </h3>
+                <h4 class="end"> 248 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Dermatologist </h3>
+                <h4 class="end"> 218
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3>Gynecologist </h3>
+                <h4 class="end"> 199
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Dermatologist </h3>
+                <h4 class="end"> 191
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Neonatologist </h3>
+                <h4 class="end"> 178
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <ion-list lines="none">
+        <h2 class="d-flex">{{'list_of_specialities' | translate}}</h2>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Addiction Psychiatrist </h3>
+                <h4 class="end"> 124 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Adolescent medicine Specialities </h3>
+                <h4 class="end"> 144 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Allegrist (immunologist) </h3>
+                <h4 class="end"> 112 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Addiction Psychiatrist </h3>
+                <h4 class="end"> 56 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Adolescent medicine Specialities</h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Allegrist (immunologist)</h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Cardiologist </h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3>Orthalmologist </h3>
+                <h4 class="end"> 248 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Dermatologist </h3>
+                <h4 class="end"> 218
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3>Gynecologist </h3>
+                <h4 class="end"> 199
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Dermatologist </h3>
+                <h4 class="end"> 191
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Neonatologist </h3>
+                <h4 class="end"> 178
+                    <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Addiction Psychiatrist </h3>
+                <h4 class="end"> 124 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Adolescent medicine Specialities </h3>
+                <h4 class="end"> 144 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Allegrist (immunologist) </h3>
+                <h4 class="end"> 112 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Addiction Psychiatrist </h3>
+                <h4 class="end"> 56 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Adolescent medicine Specialities</h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Allegrist (immunologist)</h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Addiction Psychiatrist </h3>
+                <h4 class="end"> 124 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Adolescent medicine Specialities </h3>
+                <h4 class="end"> 144 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Allegrist (immunologist) </h3>
+                <h4 class="end"> 112 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Addiction Psychiatrist </h3>
+                <h4 class="end"> 56 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Adolescent medicine Specialities</h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+        <ion-item (click)="doctroslist()">
+            <div class="item_inner d-flex">
+                <h3> Allegrist (immunologist)</h3>
+                <h4 class="end"> 314 <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                </h4>
+            </div>
+        </ion-item>
+
+    </ion-list>
+</ion-content>
